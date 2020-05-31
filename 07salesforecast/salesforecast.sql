@@ -19,14 +19,13 @@ DECLARE
                       WHERE R.ddate >= d1
                         AND R.ddate <= d2
                       GROUP BY c, g, d
+                      ORDER BY c, g, d;
 
-    ;
     cnt             int := 0;
     prev_prediction double precision;
     prev_city       int := -1;
     prev_goods      int := -1;
 
---
     city            int;
     goods           int;
     date            date;

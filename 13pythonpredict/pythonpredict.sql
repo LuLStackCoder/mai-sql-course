@@ -7,7 +7,7 @@ def moving_average(d1: str, d2: str, alpha: float=0.2)->pd.DataFrame:
                       WHERE R.ddate >= %(mindate)s
                         AND R.ddate <= %(maxdate)s
                       GROUP BY c, g, d
-        ;
+                      ORDER BY c, g, d;
     '''
 
 
